@@ -12,8 +12,9 @@ A modular, scalable, and industry-ready chat/document upload application built w
 - Automated deployment via GitHub Actions
 - FastAPI backend with semantic search, chunking, and Gemini-powered chat
 
-## Project Structure
+## 📂 Project Structure
 
+```txt
 rag-bot/
 ├── Frontend/
 │   ├── src/
