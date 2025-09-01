@@ -1,20 +1,33 @@
-# RAG-Bot
+# 🚀 RAG-Bot
 
-A modular, scalable, and industry-ready chat/document upload application built with React, Vite, Tailwind CSS (frontend) and FastAPI, PostgreSQL, Gemini API (backend).
+A **modular, scalable, and industry-ready** chat + document upload application built with:  
+- **Frontend:** React, Vite, Tailwind CSS  
+- **Backend:** FastAPI, PostgreSQL, Gemini API  
 
-## Features
-- Modern chat UI with sticky header/footer
-- File upload and preview (PDF, images)
-- Responsive design and dark theme
-- WhatsApp-style message status
-- Custom scrollbars and gradients
-- Accessible and easy to use
-- Automated deployment via GitHub Actions
-- FastAPI backend with semantic search, chunking, and Gemini-powered chat
+---
+
+## ✨ Features
+
+- 💬 Modern chat UI with sticky header & footer  
+- 📂 File upload & preview (PDF, images)  
+- 🌗 Responsive design with dark mode  
+- ✅ WhatsApp-style message status  
+- 🎨 Custom scrollbars & gradients  
+- ♿ Accessible and user-friendly  
+- ⚡ FastAPI backend with **semantic search + Gemini-powered chat**  
+- 🔄 Chunking & deduplication with SHA256  
+- 📊 Hybrid search (vector + lexical with Reciprocal Rank Fusion)  
+- 📡 Streaming chat with inline citations (SSE)  
+- 🔐 Optional rate limiting & authentication  
+- 📜 Structured JSON logging for observability  
+- 🐳 Dockerized for easy deployment  
+- 🤖 Automated deployment with GitHub Actions  
+
+---
 
 ## 📂 Project Structure
 
-```
+```txt
 rag-bot/
 ├── Frontend/
 │   ├── src/
@@ -43,7 +56,7 @@ rag-bot/
 │   └── README.md
 ├── requirements.txt
 └── README.md
-'''
+
 
 ## Frontend Setup
 1. Install dependencies:
