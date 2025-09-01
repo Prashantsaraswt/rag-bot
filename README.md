@@ -57,6 +57,7 @@ rag-bot/
 ├── requirements.txt
 └── README.md
 
+'''
 
 ## Frontend Setup
 1. Install dependencies:
