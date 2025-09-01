@@ -1,91 +1,126 @@
-# RAG-Bot
+# 🚀 RAG-Bot
 
-A modular, scalable, and industry-ready chat/document upload application built with React, Vite, Tailwind CSS (frontend) and FastAPI, PostgreSQL, Gemini API (backend).
+A modular, scalable, and industry-ready **chat + document upload** application powered by **React, Vite, Tailwind CSS (Frontend)** and **FastAPI, PostgreSQL, Gemini API (Backend)**.  
+Built for modern **Retrieval-Augmented Generation (RAG)** use cases with semantic search, chunking, and real-time AI chat.
 
-## Features
-- Modern chat UI with sticky header/footer
-- File upload and preview (PDF, images)
-- Responsive design and dark theme
-- WhatsApp-style message status
-- Custom scrollbars and gradients
-- Accessible and easy to use
-- Automated deployment via GitHub Actions
-- FastAPI backend with semantic search, chunking, and Gemini-powered chat
+---
 
-## Project Structure
+## ✨ Features
+
+- Modern **chat UI** with sticky header & footer  
+- **File upload & preview** (PDF, images)  
+- Responsive design with **dark theme**  
+- WhatsApp-style **message status**  
+- **Custom scrollbars & gradients** for smooth UX  
+- Accessible, simple, and fast  
+- **FastAPI backend** with semantic search & Gemini-powered chat  
+- **PostgreSQL + pgvector** for vector storage  
+- **Chunking & Deduplication** with SHA256  
+- **Hybrid Search** (semantic + lexical with RRF)  
+- **Streaming Chat (SSE)** with inline citations  
+- Optional **Rate Limiting & Auth**  
+- **Structured Logging** for observability  
+- **Dockerized** for easy deployment  
+
+---
+
+## 📂 Project Structure
 
 rag-bot/
 ├── Frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── App.tsx
-│   │   ├── index.css
-│   │   ├── main.tsx
-│   │   └── vite-env.d.ts
-│   ├── dist/
-│   ├── package.json
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── tsconfig.json
-│   ├── vite.config.ts
-│   └── .github/workflows/deploy.yml
+│ ├── src/
+│ │ ├── components/
+│ │ ├── App.tsx
+│ │ ├── index.css
+│ │ ├── main.tsx
+│ │ └── vite-env.d.ts
+│ ├── dist/
+│ ├── package.json
+│ ├── tailwind.config.js
+│ ├── postcss.config.js
+│ ├── tsconfig.json
+│ ├── vite.config.ts
+│ └── .github/workflows/deploy.yml
 ├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── api/ (routes)
-│   │   ├── db/ (database models/sessions)
-│   │   ├── core/ (config/cors)
-│   │   ├── models/, repositories/, schemas/, services/, utils/
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│   ├── requirements.txt
-│   └── README.md
+│ ├── app/
+│ │ ├── main.py
+│ │ ├── api/ (routes)
+│ │ ├── db/ (database models/sessions)
+│ │ ├── core/ (config/cors)
+│ │ ├── models/, repositories/, schemas/, services/, utils/
+│ ├── Dockerfile
+│ ├── docker-compose.yml
+│ ├── requirements.txt
+│ └── README.md
 ├── requirements.txt
 └── README.md
 
+yaml
+Copy code
 
-## Frontend Setup
-1. Install dependencies:
-   sh
-   cd Frontend
-   npm install
-   
-2. Run the development server:
-   sh
-   npm run dev
-   
-3. Build for production:
-   sh
-   npm run build
-   
+---
 
-## Backend Setup
-1. Create/select a Python environment (venv or conda).
-2. Install dependencies:
-   sh
-   pip install -r requirements.txt
-   
-3. Set up environment variables:
-   sh
-   cp .env.example .env  # Add your GEMINI_API_KEY
-   
-4. Run with Docker:
-   sh
-   docker-compose up --build
-   
-5. Access API docs at [http://localhost:8000/docs](http://localhost:8000/docs)
+## 🖥️ Frontend Setup
 
-## Backend Architecture & Features
-- *FastAPI*: Main API framework
-- *PostgreSQL + pgvector*: Stores document embeddings for semantic search
-- *Gemini API*: Used for embeddings and chat responses
-- *Chunking & Deduplication*: Documents are normalized, chunked, and deduplicated using SHA256
-- *Hybrid Search*: Combines vector and lexical search with Reciprocal Rank Fusion
-- *Streaming Chat*: SSE endpoint with inline citations
-- *Rate Limiting & Auth*: Optional bearer token authentication
-- *Structured Logging*: JSON logs for observability
-- *Docker*: Containerized for easy deployment
+```sh
+cd Frontend
+npm install
+npm run dev   # Run development server
+npm run build # Build for production
+⚡ Backend Setup
+sh
+Copy code
+# (inside your Python venv)
+pip install -r requirements.txt
 
-## Deployment
-- *Frontend*: Automated via GitHub Actions (deploy.yml). Artifacts can be deployed to static hosting or GitHub Pages.
-- *Backend*: Use Docker/Docker Compose for production deployment. Ensure PostgreSQL is set up with the vector extension.
+# Copy env file and add your GEMINI_API_KEY
+cp .env.example .env
+Run with Docker
+sh
+Copy code
+docker-compose up --build
+API Docs available at 👉 http://localhost:8000/docs
+
+🏗️ Backend Architecture
+FastAPI – High-performance API framework
+
+PostgreSQL + pgvector – Vector storage for embeddings
+
+Gemini API – Embeddings & chat responses
+
+Hybrid Search – Semantic + lexical (Reciprocal Rank Fusion)
+
+Chunking + Deduplication – Efficient document processing
+
+Streaming (SSE) – Real-time AI chat with citations
+
+Auth & Rate Limiting – Optional security layer
+
+Structured Logging – JSON logs for observability
+
+Dockerized – Easy containerized deployment
+
+🚀 Deployment
+Frontend
+Automated via GitHub Actions (deploy.yml)
+
+Deployable to GitHub Pages or static hosting
+
+Backend
+Run with Docker/Docker Compose
+
+Requires PostgreSQL with pgvector extension
+
+📌 Roadmap / Improvements
+ Add multi-modal RAG (text + image)
+
+ Enhance auth with JWT & RBAC
+
+ Improve query ranking with rerankers
+
+ Add monitoring (Prometheus + Grafana)
+
+ Deploy backend to cloud (AWS/GCP/Azure)
+
+
+
