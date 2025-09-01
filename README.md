@@ -14,7 +14,7 @@ A modular, scalable, and industry-ready chat/document upload application built w
 
 ## 📂 Project Structure
 
-```txt
+```
 rag-bot/
 ├── Frontend/
 │   ├── src/
@@ -43,7 +43,7 @@ rag-bot/
 │   └── README.md
 ├── requirements.txt
 └── README.md
-
+'''
 
 ## Frontend Setup
 1. Install dependencies:
