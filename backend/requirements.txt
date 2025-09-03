@@ -2,7 +2,7 @@ fastapi
 uvicorn[standard]
 SQLAlchemy[asyncio]
 asyncpg
-psycopg[binary,pool]
+psycopg2[binary,pool]
 pgvector
 pydantic
 python-multipart
