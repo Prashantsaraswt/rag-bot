@@ -1,23 +1,25 @@
-fastapi
-uvicorn[standard]
-SQLAlchemy[asyncio]
-asyncpg
-psycopg2[binary,pool]
-pgvector
-pydantic
-python-multipart
-langchain
-langchain-google-genai
-google-generativeai
-httpx
-beautifulsoup4
-readability-lxml
-lxml
-python-docx
-pypdf
-pdfminer.six
-simhash
-sse-starlette
-orjson
-structlog
-pydantic-settings
+FastAPI and ASGI server
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+sqlalchemy[asyncio]==2.0.43
+asyncpg==0.30.0
+
+Database drivers and ORM
+psycopg2-binary==2.9.10
+pgvector==0.4.1
+
+LangChain and related dependencies
+langchain==0.2.1
+langchain-core==0.2.1
+langchain-openai==0.1.7
+langchain-google-genai==0.0.17
+
+Embeddings and Vector Store
+sentence-transformers==2.7.0
+faiss-cpu==1.8.0
+
+Document loaders and parsers
+pypdf==4.2.0
+
+Other utilities
+python-dotenv==1.0.1
